@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		6A22BEB61CD5FB2400DF4B4A /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A22BEB51CD5FB2400DF4B4A /* AppConstant.swift */; };
-		6A2AE5E71CCF956300B4B250 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2AE5E61CCF956300B4B250 /* WebService.swift */; };
-		6A41A4BF1CCFA4C400B08AB4 /* AppEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A41A4BE1CCFA4C400B08AB4 /* AppEntity.swift */; };
+		6A9AF7241CD6A37A006A4952 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AF7221CD6A37A006A4952 /* HomeViewController.swift */; };
+		6A9AF7251CD6A37A006A4952 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AF7231CD6A37A006A4952 /* MapViewController.swift */; };
+		6A9AF7271CD6A3A6006A4952 /* AppEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AF7261CD6A3A6006A4952 /* AppEntity.swift */; };
+		6A9AF7291CD6A3BB006A4952 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AF7281CD6A3BB006A4952 /* WebService.swift */; };
 		6AA303291CB715D200FB59FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA303281CB715D200FB59FE /* AppDelegate.swift */; };
-		6AA3032B1CB715D200FB59FE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA3032A1CB715D200FB59FE /* HomeViewController.swift */; };
 		6AA3032E1CB715D200FB59FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AA3032C1CB715D200FB59FE /* Main.storyboard */; };
 		6AA303311CB715D200FB59FE /* SwiftProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AA3032F1CB715D200FB59FE /* SwiftProject.xcdatamodeld */; };
 		6AA303331CB715D200FB59FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AA303321CB715D200FB59FE /* Assets.xcassets */; };
 		6AA303361CB715D200FB59FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AA303341CB715D200FB59FE /* LaunchScreen.storyboard */; };
 		6AA303411CB715D200FB59FE /* SwiftProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA303401CB715D200FB59FE /* SwiftProjectTests.swift */; };
 		6AA3034C1CB715D200FB59FE /* SwiftProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA3034B1CB715D200FB59FE /* SwiftProjectUITests.swift */; };
-		6AD378971CC4C76D008D4AB1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD378961CC4C76D008D4AB1 /* MapViewController.swift */; };
 		92E3B964E804EA1740F011A7 /* Pods_SwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EAEAA003332081E0C972456 /* Pods_SwiftProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,15 +43,16 @@
 		3EAEAA003332081E0C972456 /* Pods_SwiftProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		583D28609EDF37E52F0D6BA9 /* Pods-SwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject.release.xcconfig"; sourceTree = "<group>"; };
 		6A22BEB51CD5FB2400DF4B4A /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
-		6A2AE5E61CCF956300B4B250 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebService.swift; path = ../WebService.swift; sourceTree = "<group>"; };
 		6A3005CE1CCF93C20015A59F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
-		6A41A4BE1CCFA4C400B08AB4 /* AppEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEntity.swift; sourceTree = "<group>"; };
 		6A4C9B911CCF935C00DA6EFE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		6A6BC74A1CCF92400040A361 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		6A9903411CCF974600677191 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		6A9AF7221CD6A37A006A4952 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controllers/HomeViewController.swift; sourceTree = "<group>"; };
+		6A9AF7231CD6A37A006A4952 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Controllers/MapViewController.swift; sourceTree = "<group>"; };
+		6A9AF7261CD6A3A6006A4952 /* AppEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppEntity.swift; path = Model/AppEntity.swift; sourceTree = "<group>"; };
+		6A9AF7281CD6A3BB006A4952 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebService.swift; path = Network/WebService.swift; sourceTree = "<group>"; };
 		6AA303251CB715D200FB59FE /* SwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AA303281CB715D200FB59FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6AA3032A1CB715D200FB59FE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6AA3032D1CB715D200FB59FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6AA303301CB715D200FB59FE /* SwiftProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftProject.xcdatamodel; sourceTree = "<group>"; };
 		6AA303321CB715D200FB59FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		6AA303471CB715D200FB59FE /* SwiftProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AA3034B1CB715D200FB59FE /* SwiftProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProjectUITests.swift; sourceTree = "<group>"; };
 		6AA3034D1CB715D200FB59FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6AD378961CC4C76D008D4AB1 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		6AF465A31CC4CAE0009B4A05 /* Estimote-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Estimote-Bridging-Header.h"; sourceTree = "<group>"; };
 		E16C973E76DC7D5BC354FC42 /* Pods-SwiftProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,8 +106,26 @@
 		6A22BEB81CD63F3100DF4B4A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6A9AF7261CD6A3A6006A4952 /* AppEntity.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		6A9AF72A1CD6A3ED006A4952 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6A9AF7281CD6A3BB006A4952 /* WebService.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		6A9AF72B1CD6A3F7006A4952 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6A9AF7221CD6A37A006A4952 /* HomeViewController.swift */,
+				6A9AF7231CD6A37A006A4952 /* MapViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		6AA3031C1CB715D200FB59FE = {
@@ -135,19 +153,17 @@
 		6AA303271CB715D200FB59FE /* SwiftProject */ = {
 			isa = PBXGroup;
 			children = (
+				6A9AF72B1CD6A3F7006A4952 /* Controllers */,
 				6A22BEB81CD63F3100DF4B4A /* Model */,
-				6AA303281CB715D200FB59FE /* AppDelegate.swift */,
-				6AA3032A1CB715D200FB59FE /* HomeViewController.swift */,
+				6A9AF72A1CD6A3ED006A4952 /* Network */,
 				6AA3032C1CB715D200FB59FE /* Main.storyboard */,
-				6AD378961CC4C76D008D4AB1 /* MapViewController.swift */,
+				6AA303281CB715D200FB59FE /* AppDelegate.swift */,
+				6A22BEB51CD5FB2400DF4B4A /* AppConstant.swift */,
 				6AF465A31CC4CAE0009B4A05 /* Estimote-Bridging-Header.h */,
 				6AA303321CB715D200FB59FE /* Assets.xcassets */,
 				6AA303341CB715D200FB59FE /* LaunchScreen.storyboard */,
 				6AA303371CB715D200FB59FE /* Info.plist */,
 				6AA3032F1CB715D200FB59FE /* SwiftProject.xcdatamodeld */,
-				6A2AE5E61CCF956300B4B250 /* WebService.swift */,
-				6A41A4BE1CCFA4C400B08AB4 /* AppEntity.swift */,
-				6A22BEB51CD5FB2400DF4B4A /* AppConstant.swift */,
 			);
 			path = SwiftProject;
 			sourceTree = "<group>";
@@ -367,13 +383,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A41A4BF1CCFA4C400B08AB4 /* AppEntity.swift in Sources */,
-				6AA3032B1CB715D200FB59FE /* HomeViewController.swift in Sources */,
+				6A9AF7291CD6A3BB006A4952 /* WebService.swift in Sources */,
+				6A9AF7271CD6A3A6006A4952 /* AppEntity.swift in Sources */,
+				6A9AF7241CD6A37A006A4952 /* HomeViewController.swift in Sources */,
+				6A9AF7251CD6A37A006A4952 /* MapViewController.swift in Sources */,
 				6AA303311CB715D200FB59FE /* SwiftProject.xcdatamodeld in Sources */,
 				6AA303291CB715D200FB59FE /* AppDelegate.swift in Sources */,
 				6A22BEB61CD5FB2400DF4B4A /* AppConstant.swift in Sources */,
-				6A2AE5E71CCF956300B4B250 /* WebService.swift in Sources */,
-				6AD378971CC4C76D008D4AB1 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
