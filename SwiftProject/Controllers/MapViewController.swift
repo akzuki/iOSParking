@@ -30,6 +30,7 @@ class MapViewController: UIViewController, EILIndoorLocationManagerDelegate {
     var navigationLayer: CAShapeLayer!
     var appDelegate: AppDelegate!
     var managedContext: NSManagedObjectContext!
+    var destinationIcon: UIImageView!
     
     //Testing method used when testing with simulator, comment it out when testing with real devices
     func test(sender: UITapGestureRecognizer) {
@@ -43,6 +44,9 @@ class MapViewController: UIViewController, EILIndoorLocationManagerDelegate {
         super.viewDidLoad()
         appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         managedContext = appDelegate.managedObjectContext
+        
+        destinationIcon = UIImageView.init(frame: CGRectMake(0, 0, 35, 50))
+        destinationIcon.image = UIImage(named: "locationIcon")
         
         //commit this out when testing with real devices
         let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(MapViewController.test))
@@ -145,9 +149,20 @@ class MapViewController: UIViewController, EILIndoorLocationManagerDelegate {
         locationView.layer.insertSublayer(navigationLayer, atIndex: 0)
     }
     
+    func drawDestinationIcon(selectedSpot: Spot) {
+        let pointToDraw = EILOrientedPoint(x: selectedSpot.getX(), y: selectedSpot.getY()+0.5)
+        if (locationView.objectWithidentifier("locationIcon") == nil) {
+            self.locationView.drawObjectInForeground(destinationIcon, withPosition: pointToDraw, identifier: "locationIcon")
+        } else {
+            self.locationView.moveObjectWithIdentifier("locationIcon", toPosition: pointToDraw, animated: false)
+        }
+    }
+    
     func updateUI() {
         if let currentPosition = self.currentPosition, selectedSpot = self.selectedSpot {
             updateNavigation(currentPosition, toPoint: selectedSpot.getCoordinate())
+            
+            drawDestinationIcon(selectedSpot)
             
             if (selectedSpot.getStatus()) {
                 status.text = "Status: Not Available"
