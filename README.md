@@ -33,7 +33,7 @@ $ pod install
 ```bash
 $ open "SwiftProject.xcworkspace"
 ```
-4) Compile and run the app in your devices
+4) Compile and run the app in your devices (recommended: iPhone 4S or newer)
 
 # Requirements
 
