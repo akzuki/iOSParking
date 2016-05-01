@@ -4,9 +4,9 @@
 
 ## Group members
 
-Phan Dang Hai
-Yasamin Salami
-Tehetena Masresha
+* Phan Dang Hai
+* Yasamin Salami
+* Tehetena Masresha
 
 ## Features
 
@@ -41,7 +41,7 @@ $ open "SwiftProject.xcworkspace"
 
 # Frameworks used
 
-Estimote IndoorLocation SDK
-Alamofire
-SwiftyJSON
+* Estimote IndoorLocation SDK
+* Alamofire
+* SwiftyJSON
 
