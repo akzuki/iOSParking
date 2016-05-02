@@ -24,9 +24,9 @@ class Spot: UIImageView{
         self.x = x
         self.y = y
         self.status = status
-        self.backgroundColor = UIColor.grayColor()
+//        self.backgroundColor = UIColor.grayColor()
         if (status) {
-            self.image = UIImage(named: "icon2")
+            self.image = UIImage(named: "carIcon")
         } else {
             self.image = UIImage(named: "greenDot")
         }
@@ -41,7 +41,7 @@ class Spot: UIImageView{
         if let _status = status {
             status = !_status
             if (!_status) {
-                self.image = UIImage(named: "icon2")
+                self.image = UIImage(named: "carIcon")
             } else {
                 self.image = UIImage(named: "greenDot")
             }

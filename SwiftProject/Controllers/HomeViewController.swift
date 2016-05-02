@@ -13,6 +13,8 @@ class HomeViewController: UIViewController {
     
     //MARK: Outlets
     @IBOutlet weak var emptySpotLabel: UILabel!
+    @IBOutlet weak var findingSpotButton: UIButton!
+    @IBOutlet weak var findingCarButton: UIButton!
     
     //MARK: Variables
     private var userCar: Spot?
@@ -23,9 +25,12 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         //Set up the layout
         makeGradientBackground()
-        emptySpotLabel.layer.borderColor = UIColor.whiteColor().CGColor
-        emptySpotLabel.layer.borderWidth = 3
         makeRoundedBorder(emptySpotLabel)
+        makeRoundedBorder(findingSpotButton)
+        makeRoundedBorder(findingCarButton)
+        
+        findingSpotButton.addTarget(self, action: #selector(HomeViewController.findingEmptySpot(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        findingCarButton.addTarget(self, action: #selector(HomeViewController.findingCar(_:)), forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -58,13 +63,13 @@ class HomeViewController: UIViewController {
         }
     }
     
-    //MARK: IBActions
-    @IBAction func findingEmptySpot(sender: UIButton) {
+    //MARK: Methods
+    func findingEmptySpot(sender: UIButton) {
         self.isFindingCar = false
         self.performSegueWithIdentifier("mapViewSegue", sender: nil)
     }
     
-    @IBAction func findingCar(sender: UIButton) {
+    func findingCar(sender: UIButton) {
         if let userCar = self.userCar {
             self.isFindingCar = true
             performSegueWithIdentifier("mapViewSegue", sender: nil)
@@ -85,12 +90,12 @@ class HomeViewController: UIViewController {
     }
 
     func makeGradientBackground() {
-        let colorTop = UIColor(red: 0.0/255.0, green: 168.0/255.0, blue: 134.0/255.0, alpha: 1.0).CGColor
-        let colorBottom = UIColor(red: 35.0/255.0, green: 109.0/255.0, blue: 84.0/255.0, alpha: 1.0).CGColor
+        let colorTop = UIColor(red: 15.0/255.0, green: 118.0/255.0, blue: 128.0/255.0, alpha: 1).CGColor
+        let colorBottom = UIColor(red: 84.0/255.0, green: 187.0/255.0, blue: 187.0/255.0, alpha: 1).CGColor
         let gradientBackground = CAGradientLayer()
         gradientBackground.frame = self.view.bounds
         gradientBackground.colors = [colorTop, colorBottom]
-        gradientBackground.locations = [0.0, 80.0]
+        gradientBackground.locations = [0.0, 1.0]
         self.view.layer.insertSublayer(gradientBackground, atIndex: 0)
         print("Gradient Background: Done")
     }

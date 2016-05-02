@@ -13,7 +13,6 @@ class MapViewController: UIViewController, EILIndoorLocationManagerDelegate {
     
     //MARK: Outlets
     @IBOutlet weak var status: UILabel!
-    @IBOutlet weak var id: UILabel!
     @IBOutlet weak var distance: UILabel!
     @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var parkUnpark: UIButton!
@@ -33,25 +32,27 @@ class MapViewController: UIViewController, EILIndoorLocationManagerDelegate {
     var destinationIcon: UIImageView!
     
     //Testing method used when testing with simulator, comment it out when testing with real devices
-    func test(sender: UITapGestureRecognizer) {
-        let currentPoint = locationView.calculateRealPointFromPicturePoint(sender.locationInView(locationView))
-        self.currentPosition = EILOrientedPoint(x: currentPoint.x, y: currentPoint.y)
-        updateUI()
-    }
+//    func test(sender: UITapGestureRecognizer) {
+//        let currentPoint = locationView.calculateRealPointFromPicturePoint(sender.locationInView(locationView))
+//        self.currentPosition = EILOrientedPoint(x: currentPoint.x, y: currentPoint.y)
+//        updateUI()
+//    }
     
     //ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        makeGradientBackground()
+        makeRoundedBorder(parkUnpark)
         appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         managedContext = appDelegate.managedObjectContext
         
         destinationIcon = UIImageView.init(frame: CGRectMake(0, 0, 35, 50))
-        destinationIcon.image = UIImage(named: "locationIcon")
+        destinationIcon.image = UIImage(named: "destinationIcon")
         
         //commit this out when testing with real devices
-        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(MapViewController.test))
-        locationView.userInteractionEnabled = true
-        locationView.addGestureRecognizer(tapGestureRecognizer)
+//        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(MapViewController.test))
+//        locationView.userInteractionEnabled = true
+//        locationView.addGestureRecognizer(tapGestureRecognizer)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -63,6 +64,7 @@ class MapViewController: UIViewController, EILIndoorLocationManagerDelegate {
         UIApplication.sharedApplication().beginIgnoringInteractionEvents()
         
         self.locationManager.delegate = self
+        
         ESTConfig.setupAppID("chuongtruong290893-gmail-c-af3", andAppToken: "ce9c0eea8821ff51e583c03310f7ac89")
         let fetchLocationRequest = EILRequestFetchLocation(locationIdentifier: "classroom-b305-ver2-ajz")
         fetchLocationRequest.sendRequestWithCompletion { (location, error) in
@@ -169,7 +171,6 @@ class MapViewController: UIViewController, EILIndoorLocationManagerDelegate {
             } else {
                 status.text = "Status: Available"
             }
-            id.text = "ID: " + String(selectedSpot.getId())
             distance.text = "Distance: " + String(format:"%.2f", currentPosition.distanceToPoint(selectedSpot.getCoordinate())) + " m away"
             
             if (isFindingCar!) {
@@ -195,7 +196,7 @@ class MapViewController: UIViewController, EILIndoorLocationManagerDelegate {
         if (self.isFindingCar!) {
             self.selectedSpot = self.userCar!
             isParking = false
-            //            locationView.userInteractionEnabled = false
+                        locationView.userInteractionEnabled = false
             parkUnpark.setTitle("UNPARK", forState: UIControlState.Normal)
             parkUnpark.addTarget(self, action: #selector(MapViewController.unPark), forControlEvents: UIControlEvents.TouchUpInside)
         } else {
@@ -288,6 +289,23 @@ class MapViewController: UIViewController, EILIndoorLocationManagerDelegate {
             }
         }
         return resultPoint
+    }
+    
+    func makeGradientBackground() {
+        let colorTop = UIColor(red: 15.0/255.0, green: 118.0/255.0, blue: 128.0/255.0, alpha: 1).CGColor
+        let colorBottom = UIColor(red: 84.0/255.0, green: 187.0/255.0, blue: 187.0/255.0, alpha: 1).CGColor
+        let gradientBackground = CAGradientLayer()
+        gradientBackground.frame = self.view.bounds
+        gradientBackground.colors = [colorTop, colorBottom]
+        gradientBackground.locations = [0.0, 1.0]
+        self.view.layer.insertSublayer(gradientBackground, atIndex: 0)
+        print("Gradient Background: Done")
+    }
+    
+    func makeRoundedBorder(view: UIView) {
+        view.layer.borderWidth = 2
+        view.layer.borderColor = UIColor.clearColor().CGColor
+        view.layer.cornerRadius = 10
     }
     
     override func didReceiveMemoryWarning() {
