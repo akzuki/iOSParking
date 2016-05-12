@@ -17,11 +17,11 @@ The project is intended to help users find empty spots inside of a parking lot.
 
 ## Screenshots
 
-![alt tag](https://scontent-arn2-1.xx.fbcdn.net/hphotos-xlt1/v/t34.0-12/13090503_990255014389383_2092258249_n.jpg?oh=cb3e9dd6cc869add6ec996cf12d49f3f&oe=57296743)
+![alt tag](http://i.imgur.com/GeQIMai.jpg)
 
-![alt tag](https://scontent-arn2-1.xx.fbcdn.net/v/t34.0-12/13153432_990255007722717_7054084_n.jpg?oh=c385f15810a4921e975f9b75c5a570e1&oe=5729A7D8)
+![alt tag](http://i.imgur.com/PIpSqCw.jpg)
 
-![alt tag](https://scontent-arn2-1.xx.fbcdn.net/v/t34.0-12/13101321_990254991056052_15025546_n.jpg?oh=0aecea9b8dff28ee5450b39975a13700&oe=57296E57)
+![alt tag](http://i.imgur.com/rHZ3lc3.jpg)
 ## How to build
 
 1) Clone the repository
